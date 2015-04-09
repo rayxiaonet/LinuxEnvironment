@@ -1,4 +1,5 @@
 #!/bin/bash
-ln -sfv $HOME/.screenrc $HOME/LinuxEnvironment/.screenrc
-ln -sfv $HOME/.vimrc $HOME/LinuxEnvironment/.vimrc
-ln -sfv $HOME/.vim/ $HOME/LinuxEnvironment/.vim/
+d=$(pwd)
+ln -sfv $d/.screenrc ~/.screenrc
+ln -sfv $d/.vimrc ~/.vimrc
+ln -sfv $d/.vim ~/.vim
