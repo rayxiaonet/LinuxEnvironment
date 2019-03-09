@@ -38,4 +38,4 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-source ~/envs
+source ~/.envs
