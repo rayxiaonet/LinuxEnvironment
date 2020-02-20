@@ -102,7 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-ssh-add ~/.ssh/*.pem
+ssh-add ~/.ssh/n*.pem
 
 
 #bindkey -v
@@ -118,9 +118,9 @@ bindkey "\e[5~" beginning-of-history
 bindkey "\e[6~" end-of-history
 bindkey "\e[3~" delete-char
 bindkey "\e[2~" quoted-insert
-bindkey "\e[5C" forward-word
+bindkey "\[C" forward-word
 bindkey "\eOc" emacs-forward-word
-bindkey "\e[5D" backward-word
+bindkey "\[D" backward-word
 bindkey "\eOd" emacs-backward-word
 bindkey "\ee[C" forward-word
 bindkey "\ee[D" backward-word
@@ -148,3 +148,17 @@ function title {
     echo -ne "\033]0;"$*"\007"
 
 }
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/rxiao/work/temp/Serverless-Lambda-Quickstart/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/rxiao/work/temp/Serverless-Lambda-Quickstart/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/rxiao/work/temp/Serverless-Lambda-Quickstart/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/rxiao/work/temp/Serverless-Lambda-Quickstart/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/rxiao/work/temp/Serverless-Lambda-Quickstart/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/rxiao/work/temp/Serverless-Lambda-Quickstart/node_modules/tabtab/.completions/slss.zsh
+
+
+[[ -f "$HOME/.okta/bash_functions" ]] && . "$HOME/.okta/bash_functions"
+[[ -d "$HOME/.okta/bin" && ":$PATH:" != *":$HOME/.okta/bin:"* ]] && PATH="$HOME/.okta/bin:$PATH"
