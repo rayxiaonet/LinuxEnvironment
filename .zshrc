@@ -144,10 +144,6 @@ compinit
 source ~/.envs
 DISABLE_AUTO_TITLE="true"
 
-function title {
-    echo -ne "\033]0;"$*"\007"
-
-}
 
 # tabtab source for serverless package
 # uninstall by removing these lines or running `tabtab uninstall serverless`
@@ -162,3 +158,9 @@ function title {
 
 [[ -f "$HOME/.okta/bash_functions" ]] && . "$HOME/.okta/bash_functions"
 [[ -d "$HOME/.okta/bin" && ":$PATH:" != *":$HOME/.okta/bin:"* ]] && PATH="$HOME/.okta/bin:$PATH"
+
+alias bastion='ssh -A -i ~/.ssh/nimbus-yubikey-ssh.pem  rxiao@1.2.3.4'
+
+function title {
+    echo -ne "\033]0;"$*"\007"
+}
